@@ -1,4 +1,5 @@
     --2 < 1 ::Bool
+<<<<<<< HEAD
     --4.2 + 2.0 ::Double
     --4.2 + 2 ::Double
     --4 + 2 :: Int
@@ -6,12 +7,22 @@
     --floor 2.3 ::Int
     --fromIntegral 3 :: Double
     --succ 2.2 ::Double
+=======
+    --4.2 + 2.0 ::Float , Double
+    --4.2 + 2 :: Float, Double
+    --4 + 2 :: Int
+    --(4::Int) + 2 :: Int
+    --floor 2.3 ::Int
+    --fromIntegral 3 :: Int
+    --succ 2.2 ::Float
+>>>>>>> 4494ae1ed418e04d99048a7988f807f57ecf756e
     --succ 2 ::Int
     --succ (2::Int) ::Int
     --succ 'b' ::Char
     --show 2 ::String
     --show 2.4 ::String
 
+<<<<<<< HEAD
 -----------------------------------------------------
 {-
 ['a', 'b', 'c'] :: [char]= String
@@ -24,3 +35,5 @@
 
 
  -}
+=======
+>>>>>>> 4494ae1ed418e04d99048a7988f807f57ecf756e
