@@ -34,15 +34,29 @@ calculerChi2 :: [Float] -> [Float] -> Float
 calculerChi2 xs fs = sum $ map fErr $ zip xs fs
                 where fErr (fi',fi) = (fi' - fi)**2 /fi
 
---casserCesar :: String -> [Float] -> Int
-
+casserCesar :: String -> [Float] -> Int
+casserCesar str freqs = snd $ minimum $ zip errs [0..]
+       where errs = map f [0..25]
+             f n = calculerChi2 (calculerFrequences(chiffrerCesar n str)) freqs
 
 
 main = do
 
-     print $ decaler 27 'c'
-     print $ chiffrerCesar 2 "hal"
-     print $  compterOccurences 'b' "abababababababc"
-     print $  compterLettres "toto toto"     
-     print $  calculerFrequences "test"
-     print $ calculerChi2 (calculerFrequences "test") frequencesUk
+     --print $ decaler 27 'c'
+     --print $ chiffrerCesar 2 "hal"
+     --print $  compterOccurences 'b' "abababababababc"
+     --print $  compterLettres "toto toto"     
+     --print $  calculerFrequences "test"
+     --print $ calculerChi2 (calculerFrequences "test") frequencesUk
+     --print $ casserCesar "ftq qmsxq zqhqd xaef ea ygot fuyq me itqz tq egnyuffqp fa xqmdz ar ftq odai" frequencesUk
+     --print $ chiffrerCesar 14 "ftq qmsxq zqhqd xaef ea ygot fuyq me itqz tq egnyuffqp fa xqmdz ar ftq odai"
+     
+     --str <- readFile "toto.txt"
+     --putStrLn str
+     
+     
+     args <- getArgs
+     filename <- readFile (head args)
+   
+    
+     print $ chiffrerCesar(casserCesar filename frequencesUk) filename
